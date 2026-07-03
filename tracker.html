@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Commerce Store (Admin Only Posting)</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/dist/embed.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+</head>
+<body class="bg-light">
+    <header class="sticky-top bg-white shadow-sm reveal-top">
+    
+    <div class="bg-warning text-dark py-1 small fw-medium">
+        <div class="container d-flex justify-content-between align-items-center">
+            <div>
+                <i class="bi bi-star-fill text-danger me-1"></i> Special Admin-Curated Marketplace
+            </div>
+            <div class="d-flex gap-3">
+                <a href="#" class="text-dark text-decoration-none hover-opacity">Help</a>
+                <a href="#" class="text-dark text-decoration-none hover-opacity">Contact Us</a>
+            </div>
+        </div>
+    </div>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom py-3">
+        <div class="container gap-2 gap-md-5">
+            
+            <a class="navbar-brand fw-bold fs-3 text-warning tracking-tight" href="#">
+                SHOP<span class="text-dark">MAX</span>
+            </a>
+
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="mainNavbar">
+                
+                <form class="d-flex flex-grow-1 mx-lg-5 my-3 my-lg-0" role="search">
+                    <div class="input-group">
+                        <span class="input-group-text bg-white border-end-0 text-muted">
+                            <i class="bi bi-search"></i>
+                        </span>
+                        <input class="form-control border-start-0 ps-0 form-control-lg fs-6" type="search" placeholder="Search products, brands and categories..." aria-label="Search">
+                        <button class="btn btn-warning btn-lg px-4 text-white fw-bold fs-6 shadow-sm" type="submit">SEARCH</button>
+                    </div>
+                </form>
+
+                <ul class="navbar-nav ms-auto align-items-lg-center gap-2 gap-lg-4">
+                    
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-dark fw-medium btn btn-light btn-sm px-3 d-flex align-items-center gap-2" href="#" id="accountDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="bi bi-person fs-5"></i>
+                            <span>Account</span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end shadow border-0 mt-2" aria-labelledby="accountDropdown">
+                            <li><a class="dropdown-item py-2" href="#"><i class="bi bi-bag me-2"></i>My Orders</a></li>
+                            <li><a class="dropdown-item py-2" href="#"><i class="bi bi-heart me-2"></i>Saved Items</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li class="bg-light">
+                                <a class="dropdown-item py-2 text-danger fw-bold d-flex align-items-center" href="#">
+                                    <i class="bi bi-shield-lock-fill me-2"></i>Admin Dashboard
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item dropdown d-none d-lg-block">
+                        <a class="nav-link dropdown-toggle text-dark fw-medium d-flex align-items-center gap-1" href="#" id="helpDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="bi bi-question-circle fs-5"></i>
+                            <span>Help</span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end shadow border-0 mt-2" aria-labelledby="helpDropdown">
+                            <li><a class="dropdown-item" href="#">Help Center</a></li>
+                            <li><a class="dropdown-item" href="#">Place & Track Order</a></li>
+                            <li><a class="dropdown-item" href="#">Return & Refunds</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link text-dark fw-bold d-flex align-items-center gap-2 position-relative" href="#">
+                            <div class="position-relative">
+                                <i class="bi bi-cart3 fs-4"></i>
+                                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-warning text-dark small">
+                                    0
+                                </span>
+                            </div>
+                            <span class="d-lg-inline d-none ms-1">Cart</span>
+                        </a>
+                    </li>
+                    
+                </ul>
+            </div>
+            
+        </div>
+    </nav>
+</header>
+
+<!-- LIVE PRODUCT TRACKER & DIALOGUE HUB -->
+<div class="container my-4">
+    
+    <!-- 1. TOP BOX: Search Track ID Input Bar -->
+    <div class="card bg-white border shadow-sm rounded p-3 mb-4 reveal-top">
+        <form onsubmit="event.preventDefault(); alert('Searching tracking index metrics...');">
+            <label class="form-label small fw-bold text-uppercase text-dark tracking-wide mb-2">Enter Your Tracking ID</label>
+            <div class="input-group">
+                <span class="input-group-text bg-light border-secondary-subtle"><i class="bi bi-search text-muted"></i></span>
+                <input type="text" class="form-control border-secondary-subtle fw-mono" value="TRK-2026-90482" placeholder="e.g., TRK-XXXXXXXXX" required>
+                <button type="submit" class="btn btn-warning text-white fw-bold px-4 text-uppercase">Track Package</button>
+            </div>
+            <div class="form-text extra-small text-muted mt-2">
+                <i class="bi bi-info-circle-fill text-warning me-1"></i> Paste your tracking identifier code sent via confirmation receipt.
+            </div>
+        </form>
+    </div>
+
+    <div class="row g-3">
+        
+        <!-- 2. LEFT COLUMN: Package Summary & Logistics Milestones -->
+        <div class="col-12 col-lg-7 d-flex flex-column gap-3 reveal-left">
+            
+            <!-- Items Packaged Box -->
+            <div class="card bg-white border shadow-sm rounded overflow-hidden">
+                <div class="card-header bg-white py-3 border-bottom d-flex justify-content-between align-items-center">
+                    <h6 class="mb-0 fw-bold text-dark text-uppercase small">Package Contents</h6>
+                    <span class="badge bg-warning text-dark font-monospace extra-small">ID: TRK-2026-90482</span>
+                </div>
+                <div class="card-body p-0">
+                    <!-- Item 1 Rows -->
+                    <div class="p-3 border-bottom d-flex gap-3 align-items-center">
+                        <div class="bg-light rounded p-2 border d-flex align-items-center justify-content-center flex-shrink-0" style="width: 60px; height: 60px;">
+                            <i class="bi bi-phone text-muted fs-3"></i>
+                        </div>
+                        <div class="min-w-0 flex-grow-1">
+                            <h6 class="text-dark small text-truncate fw-medium mb-1">Pro Flagship Smartphone X2 - 256GB Storage</h6>
+                            <span class="text-muted extra-small d-block">Quantity: 1 | Price: $649.00</span>
+                        </div>
+                        <div class="text-end flex-shrink-0">
+                            <span class="badge bg-success-subtle text-success small fw-semibold">Dispatched</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Logistics Tracker Line Milestone -->
+            <div class="card bg-white border shadow-sm rounded p-3">
+                <h6 class="text-uppercase fw-bold text-dark small border-bottom pb-2 mb-3">Live Status Progression</h6>
+                <div class="position-relative ps-4 border-start border-2 border-warning-subtle ms-2 d-flex flex-column gap-4">
+                    
+                    <!-- Milestone 1 -->
+                    <div class="position-relative">
+                        <div class="position-absolute top-0 start-0 translate-middle rounded-circle bg-success border border-white" style="width: 14px; height: 14px; left: -17px !important;"></div>
+                        <div class="ms-2">
+                            <span class="d-inline-block badge bg-success-subtle text-success extra-small fw-bold mb-1">COMPLETED</span>
+                            <h6 class="fw-bold text-dark small mb-0">Package Vetted &amp; Sorted</h6>
+                            <p class="extra-small text-muted mb-0">July 1, 2026 - 10:15 AM | Verified by Central Warehouse Administrator</p>
+                        </div>
+                    </div>
+
+                    <!-- Milestone 2 -->
+                    <div class="position-relative">
+                        <div class="position-absolute top-0 start-0 translate-middle rounded-circle bg-warning border border-white animate-pulse" style="width: 14px; height: 14px; left: -17px !important;"></div>
+                        <div class="ms-2">
+                            <span class="d-inline-block badge bg-warning-subtle text-dark extra-small fw-bold mb-1">IN TRANSIT</span>
+                            <h6 class="fw-bold text-dark small mb-0">Handed Over To Dispatch Carrier</h6>
+                            <p class="extra-small text-muted mb-0">July 1, 2026 - 02:30 PM | Package is presently en route to your local distribution zone.</p>
+                        </div>
+                    </div>
+
+                    <!-- Milestone 3 -->
+                    <div class="position-relative opacity-50">
+                        <div class="position-absolute top-0 start-0 translate-middle rounded-circle bg-secondary border border-white" style="width: 14px; height: 14px; left: -17px !important;"></div>
+                        <div class="ms-2">
+                            <span class="d-inline-block badge bg-light text-dark border extra-small fw-bold mb-1">PENDING</span>
+                            <h6 class="fw-bold text-secondary small mb-0">Out For Delivery / Collection Ready</h6>
+                            <p class="extra-small text-muted mb-0">Expected timeline window: Within 24 hours.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+        <!-- 3. RIGHT COLUMN: Customer Ticket Comments & Admin Replies Hub -->
+        <div class="col-12 col-lg-5 reveal-right">
+            <div class="card bg-white border shadow-sm rounded d-flex flex-column style-custom-chat">
+                
+                <!-- Chat Panel Header -->
+                <div class="card-header bg-white py-3 border-bottom d-flex align-items-center gap-2">
+                    <i class="bi bi-chat-left-text-fill text-warning"></i>
+                    <h6 class="mb-0 fw-bold text-dark text-uppercase small">Order Dialogue Support</h6>
+                </div>
+
+                <!-- Chat Messages Feed Log Window -->
+                <div class="card-body bg-light-subtle overflow-y-auto p-3 d-flex flex-column gap-3" style="max-height: 320px; min-height: 280px;">
+                    
+                    <!-- Customer Comment Bubble Box -->
+                    <div class="align-self-end text-end style-msg-user" style="max-width: 85%;">
+                        <div class="bg-warning text-white p-2 rounded-3 shadow-sm text-start small mb-1">
+                            Hello Admin, can I change my delivery timeline window to arrive exclusively after 4 PM tomorrow? I have office shifts.
+                        </div>
+                        <span class="extra-small text-muted font-monospace">You • 3:02 PM</span>
+                    </div>
+
+                    <!-- Admin Verified Reply Bubble Box -->
+                    <div class="align-self-start text-start style-msg-admin" style="max-width: 85%;">
+                        <div class="bg-white border border-secondary-subtle p-2 rounded-3 shadow-sm text-start small mb-1 text-dark">
+                            <span class="d-block extra-small text-success fw-bold text-uppercase mb-1"><i class="bi bi-shield-check-fill"></i> Store Administrator</span>
+                            Hello John! Notes have been attached to your dispatch manifest ledger. The courier handler will reach out via telephone to sync your evening drop-off.
+                        </div>
+                        <span class="extra-small text-muted font-monospace">Admin • 3:15 PM</span>
+                    </div>
+
+                </div>
+
+                <!-- Chat Action Submission Footer Input -->
+                <div class="card-footer bg-white p-2 border-top">
+                    <form onsubmit="event.preventDefault(); alert('Comment logged to admin panel inbox.');" class="d-flex gap-2">
+                        <input type="text" class="form-control form-control-sm border-secondary-subtle" placeholder="Type message or update request for admin..." required>
+                        <button type="submit" class="btn btn-warning btn-sm text-white px-3" aria-label="Send message">
+                            <i class="bi bi-send-fill"></i>
+                        </button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- FOOTER SECTION -->
+<footer class="bg-dark text-white mt-5 pt-5 pb-3 reveal-fade">
+    <div class="container">
+        
+        <!-- 1. Top Utility / Trust Sub-Footer -->
+        <div class="row pb-4 mb-4 border-bottom border-secondary align-items-center g-3">
+            <div class="col-md-4 text-center text-md-start">
+                <a class="navbar-brand fw-bold fs-3 text-warning tracking-tight" href="#">
+                    SHOP<span class="text-white">MAX</span>
+                </a>
+                <p class="text-secondary small mb-0 mt-1">Admin Curated • Verified Quality Only</p>
+            </div>
+            
+            <!-- Quick Notification Note (Jumia Style Newsletter Box placeholder) -->
+            <div class="col-md-8">
+                <form class="row g-2 justify-content-md-end align-items-center" onsubmit="event.preventDefault();">
+                    <div class="col-auto">
+                        <label class="small text-secondary fw-medium">New to ShopMax? Subscribe to deal alerts:</label>
+                    </div>
+                    <div class="col-sm-6 col-md-5">
+                        <input type="email" class="form-control form-control-sm bg-white border-0 py-2" placeholder="Enter your email address">
+                    </div>
+                    <div class="col-auto">
+                        <button type="submit" class="btn btn-warning btn-sm fw-bold px-3 py-2 text-white text-uppercase">MALE</button>
+                    </div>
+                    <div class="col-auto">
+                        <button type="submit" class="btn btn-warning btn-sm fw-bold px-3 py-2 text-white text-uppercase">FEMALE</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- 2. Main Link Columns -->
+        <div class="row g-4 pb-4">
+            
+            <!-- Column 1: Customer Service -->
+            <div class="col-6 col-md-3">
+                <h6 class="text-uppercase fw-bold text-light small mb-3">Need Help?</h6>
+                <ul class="list-unstyled text-secondary small d-flex flex-column gap-2">
+                    <li><a href="#" class="text-secondary text-decoration-none hover-opacity">Help Center</a></li>
+                    <li><a href="#" class="text-secondary text-decoration-none hover-opacity">Contact Us</a></li>
+                    <li><a href="#" class="text-secondary text-decoration-none hover-opacity">How to shop on ShopMax</a></li>
+                    <li><a href="#" class="text-secondary text-decoration-none hover-opacity">Delivery options & timelines</a></li>
+                    <li><a href="#" class="text-secondary text-decoration-none hover-opacity">Return & Refund Policy</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 2: About Store -->
+            <div class="col-6 col-md-3">
+                <h6 class="text-uppercase fw-bold text-light small mb-3">About Us</h6>
+                <ul class="list-unstyled text-secondary small d-flex flex-column gap-2">
+                    <li><a href="#" class="text-secondary text-decoration-none hover-opacity">About ShopMax</a></li>
+                    <li><a href="#" class="text-secondary text-decoration-none hover-opacity">Terms and Conditions</a></li>
+                    <li><a href="#" class="text-secondary text-decoration-none hover-opacity">Privacy Notice</a></li>
+                    <li><a href="#" class="text-secondary text-decoration-none hover-opacity">Flash Sales Details</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 3: Admin Trust & Business -->
+            <div class="col-6 col-md-3">
+                <h6 class="text-uppercase fw-bold text-light small mb-3">Admin Vault</h6>
+                <ul class="list-unstyled text-secondary small d-flex flex-column gap-2">
+                    <li>
+                        <a href="#" class="text-warning text-decoration-none fw-medium d-flex align-items-center gap-1">
+                            <i class="bi bi-shield-lock"></i> Gatekeeper Login
+                        </a>
+                    </li>
+                    <li><a href="#" class="text-secondary text-decoration-none hover-opacity">Store Inventory Analytics</a></li>
+                    <li><a href="#" class="text-secondary text-decoration-none hover-opacity">Report a counterfeit item</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 4: Payment Channels / Badges -->
+            <div class="col-6 col-md-3">
+                <h6 class="text-uppercase fw-bold text-light small mb-3">Secure Payments</h6>
+                <div class="d-flex flex-wrap gap-2 fs-3 text-secondary mb-3">
+                    <i class="bi bi-credit-card-2-back-fill" title="Visa/Mastercard"></i>
+                    <i class="bi bi-wallet2" title="Mobile Money"></i>
+                    <i class="bi bi-shield-fill-check text-warning" title="Admin Escrow Guaranteed"></i>
+                </div>
+                <h6 class="text-uppercase fw-bold text-light small mb-2">Our Channels</h6>
+                <div class="d-flex gap-3 fs-5 text-secondary">
+                    <a href="#" class="text-secondary"><i class="bi bi-facebook"></i></a>
+                    <a href="#" class="text-secondary"><i class="bi bi-instagram"></i></a>
+                    <a href="#" class="text-secondary"><i class="bi bi-twitter-x"></i></a>
+                    <a href="#" class="text-secondary"><i class="bi bi-youtube"></i></a>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- 3. Bottom Legal Disclaimer Bar -->
+        <div class="row pt-3 border-top border-secondary text-center text-md-between text-secondary small g-2">
+            <div class="col-md-auto">
+                <p class="mb-0">&copy; 2026 ShopMax Marketplace. All Rights Reserved. Only authorized administrators hold posting credentials.</p>
+            </div>
+            <div class="col-md-auto">
+                <div class="d-flex gap-3 justify-content-center">
+                    <a href="#" class="text-secondary text-decoration-none">Privacy</a>
+                    <a href="#" class="text-secondary text-decoration-none">Terms</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</footer>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+</body>
+</html>
