@@ -1,6 +1,16 @@
+Options -MultiViews
+
+DirectoryIndex index.html
+
+<IfModule mod_rewrite.c>
     RewriteEngine On
-    # Don't rewrite existing files or directories
-    RewriteCond %{REQUEST_FILENAME} !-f
-    #RewriteCond %{REQUEST_FILENAME} !-d
-    # Redirect everything else to index.html
-    RewriteRule ^ index.html [QSA,NC,L]
+    RewriteBase /
+
+    # Serve existing files/directories normally
+    RewriteCond %{REQUEST_FILENAME} -f [OR]
+    RewriteCond %{REQUEST_FILENAME} -d
+    RewriteRule ^ - [L]
+
+    # Otherwise serve the SPA
+    RewriteRule . index.html [L]
+</IfModule>
